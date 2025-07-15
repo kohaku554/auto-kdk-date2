@@ -7,10 +7,10 @@
 
         layer_0 {
             bindings = <
-&kp ESC  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none    &none  &none  &none  &none  &none  &none  &none  &none  &none  &none         &none
-&none    &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none    &none  &none  &none         &none  &none         &none  &none  &none  &none  &none
+&kp ESC         &none  &none  &none  &none  &none      &none          &none  &none  &none  &none  &none  &none
+&kp TAB         &none  &none  &none  &none  &none      &none          &none  &none  &none  &none         &kp ENTER
+&kp LEFT_SHIFT  &none  &none  &none  &none  &none      &none          &none  &none  &none  &none  &none  &none
+&none           &none  &none  &none         &kp SPACE  &kp BACKSPACE         &none  &none  &none  &none  &none
             >;
         };
 
