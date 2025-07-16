@@ -8,10 +8,10 @@
 
         layer_0 {
             bindings = <
-&kp ESC           &kp Q  &kp L  &none  &none  &none      &none          &none  &none  &none  &none  &none  &bt BT_NXT
-&kp TAB           &kp E  &kp I  &none  &none  &none      &none          &none  &none  &none  &none         &kp ENTER
-&kp LEFT_SHIFT    &kp Z  &kp X  &none  &none  &none      &none          &none  &none  &none  &none  &none  &none
-&kp LEFT_CONTROL  &none  &none  &none         &kp SPACE  &kp BACKSPACE         &none  &none  &none  &none  &none
+&kp ESC           &kp Q  &kp L  &kp U        &kp COMMA  &kp PERIOD  &kp F          &kp W  &kp R        &kp Y  &kp P  &none  &bt BT_NXT
+&kp TAB           &kp E  &kp I  &kp A        &kp O      &kp MINUS   &kp K          &kp T  &kp N        &kp S  &kp H         &kp ENTER
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C        &kp V      &kp AT      &kp G          &kp D  &kp M        &kp J  &kp B  &none  &none
+&kp LEFT_CONTROL  &none  &none  &lt 1 LANG4             &kp SPACE   &kp BACKSPACE         &lt 2 LANG6  &none  &none  &none  &none
             >;
         };
 
