@@ -3,24 +3,33 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(O) &kp H &kp I &kp Z &kp U &kp M &kp I &kp NUMBER_5 &kp NUMBER_1 &kp NUMBER_5 &kp NUMBER_5>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp ESC           &kp Q  &kp L  &kp U        &kp COMMA  &kp PERIOD  &kp F          &kp W  &kp R        &kp Y  &kp P  &none  &bt BT_NXT
-&kp TAB           &kp E  &kp I  &kp A        &kp O      &kp MINUS   &kp K          &kp T  &kp N        &kp S  &kp H         &kp ENTER
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C        &kp V      &kp AT      &kp G          &kp D  &kp M        &kp J  &kp B  &none  &none
-&kp LEFT_CONTROL  &none  &none  &lt 1 LANG4             &kp SPACE   &kp BACKSPACE         &lt 2 LANG6  &none  &none  &none  &none
+&kp ESC           &kp Q         &kp L  &kp U        &kp COMMA  &kp PERIOD  &kp F          &kp W  &kp R        &kp Y  &kp P           &none         &bt BT_SEL 0
+&kp TAB           &kp E         &kp I  &kp A        &kp O      &kp MINUS   &kp K          &kp T  &kp N        &kp S  &kp H                         &kp ENTER
+&kp LEFT_SHIFT    &kp Z         &kp X  &kp C        &kp V      &kp AT      &kp G          &kp D  &kp M        &kp J  &kp B           &kp UP_ARROW  &bt BT_SEL 1
+&kp LEFT_CONTROL  &kp LEFT_ALT  &none  &lt 1 LANG4             &kp SPACE   &kp BACKSPACE         &lt 2 LANG6  &none  &kp LEFT_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         layer_1 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6         &kp ENTER
-&none  &none  &none  &none  &none  &none  &none  &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none
-&none  &none  &none  &none         &none  &none         &kp KP_NUMBER_0  &kp DOT          &none            &none  &none
+&kp ESC           &kp F1  &kp F2   &kp F3   &kp F4   &none      &none          &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none           &none
+&kp TAB           &kp F5  &kp F6   &kp F7   &kp F8   &none      &none          &kp ASTRK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                  &kp ENTER
+&kp LSHFT         &kp F9  &kp F10  &kp F11  &kp F12  &none      &kp MINUS      &kp PLUS   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UP_ARROW    &new_macro
+&kp LEFT_CONTROL  &none   &none    &none             &kp SPACE  &kp BACKSPACE             &kp KP_NUMBER_0  &kp DOT          &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
